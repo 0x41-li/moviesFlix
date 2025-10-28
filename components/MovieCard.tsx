@@ -27,17 +27,25 @@ const MovieCard = ({
           {title}
         </Text>
 
-        <View className="flex-row items-center justify-start gap-x-1">
-          <Image source={icons.star} className="size-4" />
-          <Text className="text-xs text-white font-bold uppercase">
-            {Math.round(vote_average / 2)}
-          </Text>
-        </View>
+        <View className="flex-row justify-between">
+          <View className="flex-row items-center justify-between">
+            <Text className="text-xs text-light-300 font-medium mt-1">
+              {new Date(release_date).getFullYear()}
+            </Text>
+          </View>
 
-        <View className="flex-row items-center justify-between">
-          <Text className="text-xs text-light-300 font-medium mt-1">
-            {new Date(release_date).getFullYear()}
-          </Text>
+          <View className="flex-row items-center justify-start gap-x-1">
+            <View className="flex-row items-center justify-start gap-x-0.5">
+              {Array(Math.round(vote_average / 2))
+                .fill(0)
+                .map((_, i) => (
+                  <Image source={icons.star} className="size-2.5" />
+                ))}
+            </View>
+            <Text className="text-xs text-white font-bold uppercase">
+              {Math.round(vote_average / 2)}
+            </Text>
+          </View>
         </View>
       </TouchableOpacity>
     </Link>

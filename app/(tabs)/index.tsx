@@ -53,7 +53,7 @@ const index = () => {
             />
 
             <>
-              <Text className="text-white text-lg font-semibold mt-6">
+              <Text className="text-white text-xl font-bold mt-6">
                 Popular Movies
               </Text>
 
