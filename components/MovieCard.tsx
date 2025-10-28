@@ -39,7 +39,7 @@ const MovieCard = ({
               {Array(Math.round(vote_average / 2))
                 .fill(0)
                 .map((_, i) => (
-                  <Image source={icons.star} className="size-2.5" />
+                  <Image key={i} source={icons.star} className="size-2.5" />
                 ))}
             </View>
             <Text className="text-xs text-white font-bold uppercase">

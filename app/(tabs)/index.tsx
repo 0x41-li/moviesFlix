@@ -33,7 +33,7 @@ const index = () => {
         showsVerticalScrollIndicator={false}
         contentContainerClassName="min-h-full pb-2.5"
       >
-        <Image source={icons.logo} className="w-12 h-10 mt-20 mb-5 mx-auto" />
+        <Image source={icons.logo} className="w-12 h-10 mt-20 mx-auto" />
 
         {moviesLoading ? (
           <ActivityIndicator
@@ -46,7 +46,7 @@ const index = () => {
             {moviesError.message}
           </Text>
         ) : (
-          <View className="flex-1 mt-5">
+          <View className="flex-1 mt-10">
             <SearchBar
               onPress={() => router.push("/search")}
               placeholder="Search for a movie"
