@@ -31,7 +31,6 @@ const _layout = () => {
     <Tabs
       screenOptions={{
         tabBarShowLabel: false,
-        animation: "shift",
 
         tabBarItemStyle: {
           height: "100%",
